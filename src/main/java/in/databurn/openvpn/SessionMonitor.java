@@ -15,8 +15,7 @@ public class SessionMonitor {
             @Override
             public void run() {
                 try {
-                    //String[] command = { "/bin/sh","-c", "tail -f /var/log/syslog | grep \"openvpn\""};
-                    String[] command = {"/bin/sh", "-c", "tail ~/Desktop/openvpn-syslog | grep \"openvpn\""};
+                    String[] command = { "/bin/sh","-c", "tail -f /var/log/syslog | grep \"openvpn\""};
                     Process process = Runtime.getRuntime().exec(command);
                     BufferedReader reader = new BufferedReader(new InputStreamReader(
                             process.getInputStream()));

@@ -1,6 +1,6 @@
 # OpenVPN-Session
 
-This is a small java library to manage client sessions in OpenVPN. It parses logs in /var/log/syslog and has callback methods when a clients connects and disconnects from the server.
+This is a small java library to manage client sessions in OpenVPN community server. It parses logs in /var/log/syslog and has callback methods when a clients connects and disconnects from the server.
 
 
 ```java 
