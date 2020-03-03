@@ -79,22 +79,4 @@ public class SessionMonitor {
     public void stop() {
         sessionMonitorFlag = false;
     }
-
-    private boolean executeScript(String[] command) {
-        try {
-            Process process = Runtime.getRuntime().exec(command);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(
-                    process.getInputStream()));
-            String s = null;
-            while ((s = reader.readLine()) != null) {
-            }
-            if (s.equalsIgnoreCase("OK")) {
-                return true;
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false;
-        }
-        return false;
-    }
 }
